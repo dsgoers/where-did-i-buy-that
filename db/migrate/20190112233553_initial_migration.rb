@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class InitialMigration < ActiveRecord::Migration[5.2]
   def change
     create_table :stores do |t|
@@ -27,7 +29,7 @@ class InitialMigration < ActiveRecord::Migration[5.2]
     create_table :group_permissions do |t|
       t.references :user, null: false, foreign_key: true
       t.references :group, null: false, foreign_key: true
-      t.index [:user_id, :group_id], unique: true
+      t.index %i[user_id group_id], unique: true
     end
   end
 end
