@@ -1,5 +1,7 @@
 language: ruby
 cache:
   bundler: true
+install:
+  - gem install bundler
 script:
   - bundle exec rubocop
