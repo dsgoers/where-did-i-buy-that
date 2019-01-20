@@ -6,6 +6,7 @@ install:
   - bundle install
 before_script:
   - bundle exec rails db:setup RAILS_ENV=test
-  - bundle exec rspec
 script:
   - bundle exec rubocop
+  - bundle exec rspec
+
