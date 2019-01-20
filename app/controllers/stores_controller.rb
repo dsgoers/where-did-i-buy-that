@@ -4,7 +4,7 @@ class StoresController < ApplicationController
   def index
     load_stores
 
-    render jsonapi: @stores
+    render json: @stores
   end
 
   def show; end
