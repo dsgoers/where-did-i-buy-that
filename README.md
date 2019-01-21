@@ -1,4 +1,4 @@
 # README
 
-- [] roge
-- [x] bill
+- [ ] Setup brakeman
+- [ ] Set up bundler-audit
