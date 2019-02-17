@@ -7,17 +7,19 @@ class StoresController < ApplicationController
     render json: @stores
   end
 
-  def show; end
+  def show
+    load_store
 
-  def create; end
-
-  def update; end
-
-  def destroy; end
+    render json: @store
+  end
 
   private
 
   def load_stores
     @stores = Store.all
+  end
+
+  def load_store
+    @store = Store.find(params[:id])
   end
 end
