@@ -15,9 +15,11 @@ describe Purchase do
     expect(described_class.create.errors[:item]).to include("can't be blank")
   end
 
-  it 'requires a user' do
-    expect(described_class.create.errors[:timestamp])
-      .to include("can't be blank")
+  it 'sets timestamp' do
+    time = DateTime.current
+    allow(DateTime).to receive(:current).and_return(time)
+
+    expect(described_class.create.timestamp).to eq(time)
   end
 
   it 'requires a group' do
