@@ -53,6 +53,7 @@ group :development do
   gem 'web-console', '>= 3.3.0'
   # Spring speeds up development by keeping your application running in the
   # background. Read more: https://github.com/rails/spring
+  gem 'graphiql-rails'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
@@ -72,8 +73,4 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 gem 'pg', '~> 1.1'
 
-gem 'active_model_serializers', '~> 0.10.8'
-
 gem 'graphql', '~> 1.9'
-
-gem 'graphiql-rails', group: :development
