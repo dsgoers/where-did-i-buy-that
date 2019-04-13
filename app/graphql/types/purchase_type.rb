@@ -2,6 +2,7 @@
 
 module Types
   class PurchaseType < Types::BaseObject
+    field :id, ID, null: false
     field :store, StoreType, null: false
     field :user, UserType, null: false
     field :item, ItemType, null: false
