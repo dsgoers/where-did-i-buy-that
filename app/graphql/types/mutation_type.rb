@@ -2,6 +2,10 @@
 
 module Types
   class MutationType < Types::BaseObject
+    field :create_item, mutation: Mutations::CreateItem
+    field :create_purchase, mutation: Mutations::CreatePurchase
+    field :create_store, mutation: Mutations::CreateStore
+
     # TODO: remove me
     field :test_field,
           String,
