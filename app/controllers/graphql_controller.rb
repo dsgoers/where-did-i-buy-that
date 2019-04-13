@@ -9,10 +9,7 @@ class GraphqlController < ApplicationController
       # Query context goes here, for example:
       # current_user: current_user,
     }
-    result = WhereDidIBuyThatSchema.execute(query,
-                                            variables: variables,
-                                            context: context,
-                                            operation_name: operation_name)
+    result = execute_query(query, variables, context, operation_name)
     render json: result
   rescue StandardError => e
     raise e unless Rails.env.development?
@@ -21,6 +18,13 @@ class GraphqlController < ApplicationController
   end
 
   private
+
+  def execute_query(query, variables, context, operation_name)
+    WhereDidIBuyThatSchema.execute(query,
+                                   variables: variables,
+                                   context: context,
+                                   operation_name: operation_name)
+  end
 
   # Handle form data, JSON body, or a blank value
   def ensure_hash(ambiguous_param)
