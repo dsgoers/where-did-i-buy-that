@@ -73,3 +73,7 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 gem 'pg', '~> 1.1'
 
 gem 'active_model_serializers', '~> 0.10.8'
+
+gem 'graphql', '~> 1.9'
+
+gem 'graphiql-rails', group: :development
